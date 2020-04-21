@@ -8,45 +8,48 @@ import lombok.Setter;
 @Setter
 public class Region {
 	
+	private String fecha;
+	
 	@JsonSetter("local_id")
-	@JsonIgnore
-    public String localId; 
+	private String localId; 
 	
 	@JsonSetter("local_nombre")
-    public String localNombre; 
+	private String localNombre; 
 	
 	@JsonSetter("comuna_nombre")
-    public String comunaNombre; 
+	private String comunaNombre; 
 	
 	@JsonSetter("localidad_nombre")
-    public String localidadNombre; 
+	private String localidadNombre; 
 	
 	@JsonSetter("local_direccion")
-    public String localDireccion;
+	private String localDireccion;
     
 	@JsonSetter("funcionamiento_hora_apertura")
-    public String funcionamientoHoraApertura; 
+	private String funcionamientoHoraApertura; 
     
 	@JsonSetter("funcionamiento_hora_cierre")
-    public String funcionamientoHoraCierre;
+	private String funcionamientoHoraCierre;
     
 	@JsonSetter("local_telefono")
-    public String localTelefono; 
+	private String localTelefono; 
     
 	@JsonSetter("local_lat")
-    public String localLat; 
+	private String localLat; 
     
 	@JsonSetter("local_lng")
-    public String localLng; 
+	private String localLng; 
     
 	@JsonSetter("funcionamiento_dia")
-    public String funcionamientoDia; 
+	private String funcionamientoDia; 
     
 	@JsonSetter("fk_region")
-    public Integer idRegion;
+	private Integer idRegion;
     
 	@JsonSetter("fk_comuna")
-    public Integer idComuna;
+	private Integer idComuna;
+	
+	
 
 	@JsonIgnore
 	public String getLocalId() {
@@ -106,6 +109,11 @@ public class Region {
 	@JsonIgnore
 	public Integer getIdComuna() {
 		return idComuna;
+	}
+
+	@JsonIgnore
+	public String getFecha() {
+		return fecha;
 	} 
 
 }
