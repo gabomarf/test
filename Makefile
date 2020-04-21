@@ -14,6 +14,4 @@ build:
 	@ $(MVN) clean install -U
 	docker build -t $(IMAGE) .
 run:
-	docker run -p 8080:8080 $(IMAGE)
-#push:
-#    docker push $(IMAGE)
+	docker run -idt -p8080:8080 $(IMAGE)
