@@ -79,6 +79,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<includeSystemScope>true</includeSystemScope>
+					<forceJavacCompilerUse>true</forceJavacCompilerUse> 
 				</configuration>
 				<executions>
 					<execution>

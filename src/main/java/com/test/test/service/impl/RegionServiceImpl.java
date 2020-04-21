@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.test.client.ApiRegionDao;
 import com.test.test.domain.Region;
 import com.test.test.domain.RegionPredicates;
