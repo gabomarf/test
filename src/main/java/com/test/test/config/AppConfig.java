@@ -14,6 +14,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.test.client.ApiRegionDaoImpl;
 
 @Configuration
@@ -42,6 +44,8 @@ public class AppConfig {
 	@Bean
 	public RestTemplate restTemplate() {
 		MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
+		ObjectMapper objectMapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+		converter.setObjectMapper(objectMapper);
 	    converter.setSupportedMediaTypes(Collections.singletonList(MediaType.TEXT_HTML));
 		 RestTemplate restTemplate = new RestTemplateBuilder()
 					.setConnectTimeout(Duration.ofMillis(this.timeConn))

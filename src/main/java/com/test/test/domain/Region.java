@@ -9,6 +9,7 @@ import lombok.Setter;
 public class Region {
 	
 	@JsonSetter("local_id")
+	@JsonIgnore
     public String localId; 
 	
 	@JsonSetter("local_nombre")
