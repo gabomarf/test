@@ -14,4 +14,4 @@ build:
 	@ $(MVN) clean install -U
 	docker build -t $(IMAGE) .
 run:
-	docker run -idt -p8080:8080 $(IMAGE)
+	docker run -idt --name=$(APP) -p8080:8080 $(IMAGE)

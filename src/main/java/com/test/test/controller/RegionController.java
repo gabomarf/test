@@ -3,7 +3,6 @@ package com.test.test.controller;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +34,7 @@ public class RegionController {
 			@ApiResponse(code = 200, message = "Successfully retrieved list", response = ListRegion.class),
 			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found", response = ErrorResponse.class),
 			@ApiResponse(code = 500, message = "System error", response = ErrorResponse.class)})
-	public ResponseEntity<?> getAll(@PathVariable(value = "idRegion", required = false) Integer idRegion, 
+	public ResponseEntity<?> getAll(@RequestParam(value = "idRegion", required = false) Integer idRegion, 
 			@RequestParam(value = "comuna", required = false) String nameComune) {
 		return ResponseEntity.ok().body(this.regionService.getRegionByRegion(idRegion, nameComune));
 	}
