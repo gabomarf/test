@@ -1,5 +1,6 @@
 package com.test.test.domain;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
@@ -56,6 +57,7 @@ public class Region {
 		return localId;
 	}
 
+	@JsonGetter("localNombre")
 	public String getLocalNombre() {
 		return localNombre;
 	}
@@ -70,6 +72,7 @@ public class Region {
 		return localidadNombre;
 	}
 
+	@JsonGetter("localDireccion")
 	public String getLocalDireccion() {
 		return localDireccion;
 	}
@@ -84,14 +87,17 @@ public class Region {
 		return funcionamientoHoraCierre;
 	}
 
+	@JsonGetter("localTelefono")
 	public String getLocalTelefono() {
 		return localTelefono;
 	}
 
+	@JsonGetter("localLat")
 	public String getLocalLat() {
 		return localLat;
 	}
 
+	@JsonGetter("localLng")
 	public String getLocalLng() {
 		return localLng;
 	}
