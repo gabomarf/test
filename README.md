@@ -2,9 +2,9 @@
 
 ### Install
 
-mkdir test && cd test
-git clone https://github.com/gabomarf/test.git
-make all
+- mkdir test && cd test
+- git clone https://github.com/gabomarf/test.git
+- make all
 
 
 ### API
